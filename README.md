@@ -23,3 +23,8 @@ Puedes probar la aplicación utilizando Postman o tu navegador:
 
 ```http
 GET http://localhost:8080/orders
+```
+## Nota
+1. Puedes instalar o cambiar el proyecto como quieras.
+2. El proyecto usa por defecto la base de datos H2, no necesitas configurar nada.
+3. Si quieres resetear la base de datos elimina la carpeta 'data' y vuelve a correr el proyecto.
