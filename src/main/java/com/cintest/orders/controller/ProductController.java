@@ -34,6 +34,17 @@ public class ProductController {
                 .body(response);
     }
 
-
+    @GetMapping
+    public ResponseEntity<?>findAllProducts(){
+        List<ProductVo> vos = productService.getProducts();
+        StandarResponse response = StandarResponse
+                .builder()
+                .message("Productos obtenidos correctamente")
+                .data(vos)
+                .build();
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(response);
+    }
 
 }

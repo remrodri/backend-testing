@@ -18,8 +18,14 @@ public class ProductService implements IProductService {
 
     @Override
     public List<ProductVo> getProducts() {
-
-        return List.of();
+        List<Product> products = productRepository.findAll();
+        return products.stream().map(product -> new ProductVo(
+                product.getId(),
+                product.getNumber(),
+                product.getPName(),
+                product.getPPrice()
+        )).toList();
+//        return List.of();
     }
 
     @Override
