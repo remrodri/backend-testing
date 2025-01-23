@@ -22,7 +22,7 @@ public class ProductController {
 
     @PostMapping
     public ResponseEntity<StandarResponse> createProduct(@Valid @RequestBody CreateProductDto dto){
-        System.out.println(dto);
+//        System.out.println(dto);
         ProductVo vo = productService.createProduct(dto);
         StandarResponse response = StandarResponse
                 .builder()

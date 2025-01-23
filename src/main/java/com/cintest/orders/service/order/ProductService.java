@@ -7,6 +7,7 @@ import com.cintest.orders.vo.ProductVo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductService implements IProductService {
@@ -44,5 +45,10 @@ public class ProductService implements IProductService {
                 productSaved.getPName(),
                 productSaved.getPPrice()
         );
+    }
+
+    @Override
+    public Optional<Product> findProductById(Long id) {
+        return productRepository.findById(id);
     }
 }
